@@ -10,9 +10,10 @@ nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    
 
     &__item {
-      color: var.$color-neutro-900;
+      color: var.$color-neutro-100;
       font-size: var.$font-size-md;
 
       &:hover,

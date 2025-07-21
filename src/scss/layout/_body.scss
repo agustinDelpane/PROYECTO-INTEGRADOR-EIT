@@ -11,5 +11,7 @@ body {
         "main"
         "footer";
     grid-template-rows: max-content max-content 1fr max-content;
-    
+
+    background-image: url(../assets/images/background.jpg);
+    background-size: cover;
 }

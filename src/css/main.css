@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 ul {
@@ -21,6 +21,14 @@ img {
   width: 100%;
 }
 
+@font-face {
+  font-family: "rubik-glitch";
+  src: url(../assets/fonts/RubikGlitch-Regular.ttf);
+}
+h1 {
+  font-family: rubik-glitch, Arial, sans-serif;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -28,6 +36,7 @@ img {
   border: 1px solid #212529;
   padding: 1rem;
   border-radius: 1rem 0 1rem 0;
+  background-color: #ced4da;
 }
 .card__image {
   border-top-left-radius: 0.5rem;
@@ -167,12 +176,22 @@ img {
   background-color: #3b241a;
   outline: 1px solid #212529;
 }
+.button--submit {
+  background-color: #e24141;
+  color: #f8f9fa;
+  border-color: #343a40;
+  padding: 0.25rem;
+}
+.button--submit:hover, .button--submit:active {
+  background-color: #921f1f;
+  outline: 1px solid #ced4da;
+}
 
 .title {
   padding: 1rem 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3b241a;
+  color: #f8f9fa;
 }
 
 .form {
@@ -189,7 +208,6 @@ img {
 .form__group__label {
   font-size: 0.875rem;
   font-weight: 700;
-  color: #3b241a;
 }
 
 body {
@@ -197,14 +215,17 @@ body {
   display: grid;
   grid-template-areas: "header" "navbar" "main" "footer";
   grid-template-rows: max-content max-content 1fr max-content;
+  background-image: url(../assets/images/background.jpg);
+  background-size: cover;
 }
 
 footer {
   grid-area: footer;
-  padding: 0.5rem;
+  padding: 0.25rem;
+  background-color: rgba(52, 58, 64, 0.96);
 }
 footer .copyright {
-  color: #343a40;
+  color: #f8f9fa;
   font-size: 1rem;
   font-weight: 400;
   text-align: center;
@@ -213,6 +234,19 @@ footer .copyright {
 header {
   grid-area: header;
   padding: 1.5rem;
+  background-color: rgba(52, 58, 64, 0.96);
+  color: #f8f9fa;
+}
+header .img-logo {
+  width: 8%;
+  position: absolute;
+  top: 0px;
+  left: 320px;
+}
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+  color: #921f1f;
 }
 
 main {
@@ -229,33 +263,53 @@ nav .navbar {
   gap: 1rem;
 }
 nav .navbar__item {
-  color: #212529;
+  color: #f8f9fa;
   font-size: 1rem;
 }
 nav .navbar__item:hover, nav .navbar__item--active {
   font-weight: 700;
 }
 
+.page-home .highlighted-products {
+  background-color: rgba(52, 58, 64, 0.94);
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #f8f9fa;
+  text-align: center;
+}
+.page-home .highlighted-products__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .page-about-us .approaches-container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  background-color: rgba(52, 58, 64, 0.94);
+}
+.page-about-us .approaches-container .title {
+  text-align: center;
+  text-decoration: underline;
 }
 .page-about-us .approaches-container .mission__title,
 .page-about-us .approaches-container .vision__title,
 .page-about-us .approaches-container .values__title {
-  color: #212529;
+  color: #f8f9fa;
   font-size: 1.25rem;
   font-weight: 700;
-  padding-bottom: 0.25rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
 }
 .page-about-us .approaches-container .mission__description,
 .page-about-us .approaches-container .vision__description,
 .page-about-us .approaches-container .values__description {
-  color: #343a40;
+  color: #f8f9fa;
   font-size: 1rem;
   font-weight: 400;
   text-align: justify;
+  padding: 0 0.5rem;
 }
 .page-about-us .approaches-container .mission__image,
 .page-about-us .approaches-container .vision__image,
@@ -265,6 +319,7 @@ nav .navbar__item:hover, nav .navbar__item--active {
   width: 25%;
   float: left;
   margin: 0 0.5rem 0.25rem 0;
+  padding: 0 1rem 1rem 1rem;
 }
 .page-about-us .approaches-container .vision__image {
   float: right;
@@ -277,6 +332,9 @@ nav .navbar__item:hover, nav .navbar__item--active {
   justify-content: center;
   gap: 2rem;
   width: 450px;
+  background-color: rgba(52, 58, 64, 0.94);
+  color: #f8f9fa;
+  padding: 1rem;
 }
 .page-contact .content .query-form {
   display: flex;
@@ -299,7 +357,13 @@ nav .navbar__item:hover, nav .navbar__item--active {
 .page-contact .content .contact-data__item {
   font-size: 0.875rem;
   font-weight: 700;
-  color: #3b241a;
+}
+.page-contact .content .contact-data__item a {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+.page-contact .content .contact-data__item a:hover, .page-contact .content .contact-data__item a:active {
+  color: #ced4da;
 }
 
 .page-products__head {

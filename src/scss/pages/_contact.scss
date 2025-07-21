@@ -8,6 +8,9 @@
         justify-content: center;
         gap: var.$spacing-xl ;
         width: 450px;
+        background-color: rgba($color: var.$color-neutro-700, $alpha: 0.94);
+        color: var.$color-neutro-100;
+        padding: var.$spacing-md;
 
         .query-form {
             display: flex;
@@ -33,7 +36,16 @@
             &__item {
                 font-size: var.$font-size-sm;
                 font-weight: var.$font-weight-bold;
-                color: var.$color-primary-900;
+
+                & a{
+                    color: var.$color-neutro-100;
+                    text-decoration: underline;
+
+                    &:hover,
+                    &:active{
+                        color: var.$color-neutro-300;
+                    }
+                }
             }
         }
     }
